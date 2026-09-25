@@ -1,0 +1,278 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #172234;
+  background: #f6f0df;
+  font-family: "Arial Narrow", "Roboto Condensed", Arial, sans-serif;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(184, 95, 67, 0.05) 0 2px, transparent 3px),
+    radial-gradient(circle at 81% 44%, rgba(30, 49, 85, 0.045) 0 1px, transparent 2px),
+    linear-gradient(rgba(246, 240, 223, 0.9), rgba(246, 240, 223, 0.9));
+  background-size:
+    27px 27px,
+    31px 31px,
+    auto;
+}
+
+button,
+input {
+  font: inherit;
+}
+button {
+  color: inherit;
+}
+
+.display-title,
+.section-title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 0.045em;
+}
+
+.section-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.55rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.paper-panel {
+  border: 2px solid #172234;
+  background: rgba(250, 245, 229, 0.86);
+  padding: 0.9rem;
+  box-shadow: 4px 4px 0 rgba(23, 34, 52, 0.12);
+}
+
+.primary-button,
+.secondary-button,
+.quantity-button,
+.remove-button,
+.payment-card {
+  transition:
+    transform 0.14s ease,
+    box-shadow 0.14s ease,
+    background-color 0.14s ease;
+}
+
+.primary-button {
+  border: 2px solid #172234;
+  background: #1e3155;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 4px 4px 0 #17223433;
+}
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 5px 6px 0 #17223433;
+}
+.primary-button:focus-visible,
+.secondary-button:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #b85f43;
+  outline-offset: 2px;
+}
+
+.secondary-button {
+  border: 2px solid #172234;
+  background: #eadfc4;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.secondary-button:hover:not(:disabled) {
+  background: #d9ccad;
+  transform: translateY(-1px);
+}
+.secondary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.quantity-button {
+  display: grid;
+  height: 1.55rem;
+  width: 1.55rem;
+  place-items: center;
+  border: 1.5px solid #172234;
+  background: #a8cbbd;
+  font-weight: 900;
+  line-height: 1;
+}
+.quantity-button:hover {
+  background: #77aa99;
+}
+
+.remove-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  font-size: 0.65rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.remove-button span:first-child {
+  font-size: 1.65rem;
+  color: #b85f43;
+}
+.remove-button:hover {
+  transform: rotate(-2deg) scale(1.03);
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  border: 0;
+  border-bottom: 2px solid #172234;
+  background: transparent;
+  padding: 0.45rem 0.2rem;
+  color: #172234;
+  font-size: 0.95rem;
+  font-weight: 700;
+  outline: none;
+}
+.form-input:focus {
+  border-color: #b85f43;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.payment-card {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 4.2rem;
+  cursor: pointer;
+  border: 2px solid #172234;
+  background: #eee5cf;
+  padding: 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.payment-card:hover {
+  transform: translateY(-1px);
+}
+.payment-card-active {
+  background: #dce7dc;
+  box-shadow: inset 0 0 0 2px #4f8578;
+}
+.payment-card input {
+  accent-color: #1e3155;
+}
+
+.tile-swatch {
+  display: inline-block;
+  flex: none;
+  border: 1.5px solid #172234;
+  background-color: #efe8d5;
+  background-size: 100% 100%;
+}
+
+.tile-ocean {
+  background-color: #263e69;
+  background-image: repeating-radial-gradient(
+    ellipse at 0 100%,
+    transparent 0 9px,
+    #e9e3d2 10px 13px,
+    transparent 14px 21px
+  );
+}
+.tile-fern {
+  background-color: #dde7d8;
+  background-image:
+    repeating-linear-gradient(62deg, transparent 0 8px, #4f8578 9px 12px, transparent 13px 21px),
+    repeating-linear-gradient(-62deg, transparent 0 15px, #2e665c 16px 18px, transparent 19px 27px);
+}
+.tile-dot {
+  background-color: #f3e6cf;
+  background-image: radial-gradient(circle, #b85f43 0 28%, transparent 30%);
+  background-size: 22px 22px;
+}
+.tile-star {
+  background-color: #f2ead5;
+  background-image: conic-gradient(
+    from 18deg at 50% 50%,
+    #d19a31 0 10%,
+    transparent 10% 20%,
+    #d19a31 20% 30%,
+    transparent 30% 40%,
+    #d19a31 40% 50%,
+    transparent 50% 60%,
+    #d19a31 60% 70%,
+    transparent 70% 80%,
+    #d19a31 80% 90%,
+    transparent 90%
+  );
+}
+.tile-clay {
+  background-color: #ba674b;
+  background-image:
+    linear-gradient(45deg, transparent 37%, #eadfc4 38% 47%, transparent 48% 100%),
+    linear-gradient(-45deg, transparent 37%, #eadfc4 38% 47%, transparent 48% 100%);
+}
+.tile-mosaic {
+  background-color: #eee3cd;
+  background-image:
+    radial-gradient(circle at 25% 25%, #b85f43 0 7%, transparent 8%),
+    radial-gradient(circle at 75% 25%, #d19a31 0 7%, transparent 8%),
+    radial-gradient(circle at 25% 75%, #4f8578 0 7%, transparent 8%),
+    radial-gradient(circle at 75% 75%, #1e3155 0 7%, transparent 8%);
+  background-size: 24px 24px;
+}
+.tile-mint {
+  background-color: #d6e3dc;
+  background-image:
+    linear-gradient(135deg, transparent 0 36%, #4f8578 37% 46%, transparent 47% 100%),
+    linear-gradient(45deg, transparent 0 36%, #4f8578 37% 46%, transparent 47% 100%);
+  background-size: 22px 22px;
+}
+.tile-sunset {
+  background-color: #e8d5b7;
+  background-image:
+    radial-gradient(circle at 0 100%, transparent 0 38%, #b85f43 40% 48%, transparent 50%),
+    radial-gradient(circle at 100% 0, transparent 0 38%, #d19a31 40% 48%, transparent 50%);
+}
+
+@media (max-width: 1023px) {
+  .section-title {
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .display-title {
+    font-size: 2.35rem;
+  }
+  .section-title {
+    font-size: 1.65rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
